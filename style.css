@@ -1,0 +1,527 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: rgb(246, 208, 214); */
+}
+
+#more-text{
+    display: none;
+}
+
+li, a, button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    margin-bottom: 50px;
+    background-color: pink;
+    box-shadow: 0 4px 10px black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    cursor: pointer;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: black;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgb(0, 0, 0); 
+    /* yg atas ganti ke rgba aja */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    /* ini samain warnanya kek button atas pake rgba */
+    background-color: pink;
+}
+
+section{
+    min-height: 100vh;
+    margin: 100px 0;
+    padding: 50px 0;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    min-height: 70vh;
+}
+
+.home-content p{
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.home-img img {
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px pink;
+    cursor: pointer;
+    animation: floatImage 6s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.home-img img:hover{
+    box-shadow: 0 0 25px black
+                0 0 35px black,
+                0 0 45px black;
+}
+
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-1.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.home-content{
+    margin-left: 1rem;
+}
+
+.home-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    color: rgb(255, 139, 158);
+}
+
+.home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0.2rem solid ;
+    border-radius: 50%;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    margin: 3rem 1.5rem 3rem 0;
+    transform: 0.3s ease;
+}
+
+.social-media a:hover{
+    transform: scale(1,1) translateY(-10px);
+    background-color: rgb(213, 132, 145);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px pink;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: black;
+    box-shadow: none;
+    font-size: 0.8rem;
+    color: rgb(246, 246, 246);
+    border-radius: 250px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin-bottom: 50px;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1.6rem pink;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: rgb(255, 217, 217);
+    padding: 100px 80px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.about-img img{
+    width: 25vw;
+    border: 2px solid rgb(251, 239, 241);
+    border-radius: 50%;
+    box-shadow: 0 0 25px yellow;
+    cursor: pointer;
+    transform: 0.4s ease;
+}
+
+.about-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color,
+                0 0 45px var(--main-color));
+}
+
+.heading{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.about-content{
+    pad: 0 3rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    margin: 2rem 0 3rem;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 2;
+}
+
+.funfact h2{
+    margin-bottom: 5rem;
+}
+
+.funfact-container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.funfact-container .funfact-box{
+    flex: 1 1 30rem;
+    max-width: 17rem;
+    min-height: 12rem;
+    background: rgb(235, 151, 172);
+    padding: 2rem 1rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 0.3rem solid rgb(254, 231, 235);
+    transition: 0.3s ease;
+}
+
+.funfact-container .funfact-box:hover{
+    border-color: palevioletred;
+    transform: scale(1.02);
+}
+
+.funfact-box i {
+    font-size: 2rem;
+    color: rgb(242, 235, 235);
+}
+
+.funfact-box h3{
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+.funfact-box p{
+    font-size: 0.8rem;
+    margin: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+.myactivity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem auto;
+    align-items: center;
+    text-align: center;
+    background-color: pink;
+    padding: 3rem 0 6rem 0;
+    margin-bottom: 1rem;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.myactivity-box{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.myactivity-item{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    align-items: ce;
+    transition: 0.3s ease;
+    border: 0.2rem solid white;
+}
+
+.myactivity-item:hover{
+    transform: scale(1.02);
+    border-color: black;
+}
+
+.myactivity-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.myactivity .heading{
+    margin-bottom: 50px;
+    color: white;
+}
+
+.contact{
+    margin-bottom: 20px;
+}
+.contact .heading{
+    text-align: center;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+
+.contact form{
+    max-width: 500px;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    color: pink;
+    border-radius: 0.2rem;
+    border: 0.25rem solid pink;
+    margin: 0.3rem 0;
+    resize: none;
+}
+
+.contact form .input-box input{
+    width: 48%;
+    margin: 0.7rem 0rem;
+}
+
+.contact form textarea{
+    height: 120px;
+}
+.contact form .btn{
+    margin-top: 2rem;
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: black;
+    margin-top: 10px;
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 10px;
+    color: black;
+}
+
+.footer .social a{
+    font-size: 25px;
+    color: pink;
+    border: 2px solid pink;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1,1) translateY(-10px);
+    background-color: rgb(213, 132, 145);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px pink;
+}
+
+.footer .copyright{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3%;
+    }
+    .funfact{
+        padding: 7rem;
+    }
+    .myactivity .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 991px){
+    /* .navbar{
+        position: absolute;
+        top: 100%;
+        right: -300%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: pink;
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+    } 
+    .navbar a{
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+    .navbar.active{
+        right: 0;
+    }  */
+    .home{
+        flex-direction: column;
+    }
+    .home-content{
+        order: 2;
+        margin-left: 1rem;
+    }
+    .home-img img{
+        width: 40vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-img img{
+        width: 40vw;
+        margin-top: 4rem;
+    }
+    .funfact h2{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 617px){
+    .home-img img{
+        width: 40vw;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width: 40vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 617px){
+    html{
+        font-size: 50%;
+    }
+}
